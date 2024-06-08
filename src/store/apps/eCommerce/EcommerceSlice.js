@@ -17,7 +17,7 @@ const initialState = {
     price: 'All',
     rating: '',
   },
-  error: ''
+  error: '',
 };
 
 export const EcommerceSlice = createSlice({

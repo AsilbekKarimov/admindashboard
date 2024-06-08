@@ -12,6 +12,7 @@ const ModernDash = Loadable(lazy(() => import('../views/dashboard/Modern')));
 const EcommerceDash = Loadable(lazy(() => import('../views/dashboard/Ecommerce')));
 
 /* ****Apps***** */
+const Calendar = Loadable(lazy(() => import('../views/apps/calendar/BigCalendar')));
 const Notes = Loadable(lazy(() => import('../views/apps/notes/Notes')));
 const Contacts = Loadable(lazy(() => import('../views/apps/contacts/Contacts')));
 const Ecommerce = Loadable(lazy(() => import('../views/apps/eCommerce/Ecommerce')));
@@ -116,6 +117,7 @@ const Router = [
       { path: '/dashboards/modern', exact: true, element: <ModernDash /> },
       { path: '/dashboards/ecommerce', exact: true, element: <EcommerceDash /> },
       { path: '/apps/notes', element: <Notes /> },
+      { path: '/apps/calendar', element: <Calendar /> },
       { path: '/apps/contacts', element: <Contacts /> },
       { path: '/apps/ecommerce/shop', element: <Ecommerce /> },
       { path: '/apps/ecommerce/eco-product-list', element: <EcomProductList /> },
