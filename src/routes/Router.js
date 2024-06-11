@@ -13,6 +13,7 @@ const EcommerceDash = Loadable(lazy(() => import('../views/dashboard/Ecommerce')
 
 /* ****Apps***** */
 const Calendar = Loadable(lazy(() => import('../views/apps/calendar/BigCalendar')));
+const Branches = Loadable(lazy(() => import('../views/apps/branches/Branches.js')));
 const Notes = Loadable(lazy(() => import('../views/apps/notes/Notes')));
 const Contacts = Loadable(lazy(() => import('../views/apps/contacts/Contacts')));
 const Ecommerce = Loadable(lazy(() => import('../views/apps/eCommerce/Ecommerce')));
@@ -123,15 +124,9 @@ const Router = [
       { path: '/apps/ecommerce/eco-product-list', element: <EcomProductList /> },
       { path: '/apps/ecommerce/eco-checkout', element: <EcomProductCheckout /> },
       { path: '/apps/ecommerce/detail/:id', element: <EcommerceDetail /> },
-      { path: '/apps/followers', element: <Followers /> },
-      { path: '/apps/friends', element: <Friends /> },
-      { path: '/apps/gallery', element: <Gallery /> },
-      { path: '/user-profile', element: <UserProfile /> },
-      { path: '/pages/casl', element: <RollbaseCASL /> },
-      { path: '/pages/treeview', element: <Treeview /> },
-      { path: '/pages/pricing', element: <Pricing /> },
+      { path: '/apps/branches', element: <Branches /> },
+      
       { path: '/pages/account-settings', element: <AccountSetting /> },
-      { path: '/pages/faq', element: <Faq /> },
       { path: '/forms/form-elements/autocomplete', element: <MuiAutoComplete /> },
       { path: '/forms/form-elements/button', element: <MuiButton /> },
       { path: '/forms/form-elements/checkbox', element: <MuiCheckbox /> },
@@ -141,12 +136,6 @@ const Router = [
       { path: '/forms/form-elements/switch', element: <MuiSwitch /> },
       { path: '/forms/form-elements/switch', element: <MuiSwitch /> },
       { path: '/forms/quill-editor', element: <QuillEditor /> },
-      { path: '/forms/form-layouts', element: <FormLayouts /> },
-      { path: '/forms/form-horizontal', element: <FormHorizontal /> },
-      { path: '/forms/form-vertical', element: <FormVertical /> },
-      { path: '/forms/form-custom', element: <FormCustom /> },
-      { path: '/forms/form-wizard', element: <FormWizard /> },
-      { path: '/forms/form-validation', element: <FormValidation /> },
       { path: '/tables/basic', element: <BasicTable /> },
       { path: '/tables/collapsible', element: <CollapsibleTable /> },
       { path: '/tables/enhanced', element: <EnhancedTable /> },
@@ -172,9 +161,6 @@ const Router = [
       { path: '/ui-components/tooltip', element: <MuiTooltip /> },
       { path: '/ui-components/transfer-list', element: <MuiTransferList /> },
       { path: '/ui-components/typography', element: <MuiTypography /> },
-      { path: '/widgets/cards', element: <WidgetCards /> },
-      { path: '/widgets/banners', element: <WidgetBanners /> },
-      { path: '/widgets/charts', element: <WidgetCharts /> },
 
       { path: '*', element: <Navigate to="/auth/404" /> },
     ],
@@ -196,6 +182,7 @@ const Router = [
       { path: '/landingpage', element: <Landingpage /> },
       { path: '*', element: <Navigate to="/auth/404" /> },
     ],
+
   },
 ];
 

@@ -48,6 +48,7 @@ import {
   IconBorderStyle2,
   IconAppWindow,
   IconLockAccess,
+  
 } from '@tabler/icons';
 
 import { uniqueId } from 'lodash';
@@ -151,6 +152,12 @@ const Menuitems = [
     title: 'Calendar',
     icon: IconCalendar,
     href: '/apps/calendar',
+  },
+  {
+    id: uniqueId(),
+    title: 'Branches',
+    icon: IconLayout,
+    href: '/apps/branches',
   },
   {
     navlabel: true,
