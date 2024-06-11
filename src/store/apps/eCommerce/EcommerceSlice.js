@@ -19,7 +19,7 @@ const initialState = {
   },
   error: ''
 };
-
+  
 export const EcommerceSlice = createSlice({
   name: 'ecommerce',
   initialState,

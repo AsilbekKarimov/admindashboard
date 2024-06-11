@@ -1,36 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Avatar, IconButton, Menu, MenuItem, Typography } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { setLanguage } from 'src/store/customizer/CustomizerSlice';
 import FlagEn from 'src/assets/images/flag/icon-flag-en.svg';
-import FlagFr from 'src/assets/images/flag/icon-flag-fr.svg';
-import FlagCn from 'src/assets/images/flag/icon-flag-cn.svg';
-import FlagSa from 'src/assets/images/flag/icon-flag-sa.svg';
+import FlagRu from 'src/assets/images/flag/icon-flag-ru.svg';
+import FlagUz from 'src/assets/images/flag/icon-flag-uz.svg';
 import { Stack } from '@mui/system';
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
 
 const Languages = [
   {
-    flagname: 'English (UK)',
+    flagname: 'English',
     icon: FlagEn,
     value: 'en',
   },
   {
-    flagname: '中国人 (Chinese)',
-    icon: FlagCn,
-    value: 'ch',
+    flagname: 'Русский (Russian)',
+    icon: FlagRu,
+    value: 'ru',
   },
   {
-    flagname: 'français (French)',
-    icon: FlagFr,
-    value: 'fr',
-  },
-
-  {
-    flagname: 'عربي (Arabic)',
-    icon: FlagSa,
-    value: 'ar',
+    flagname: 'Oʻzbekcha (Uzbek)',
+    icon: FlagUz,
+    value: 'uz',
   },
 ];
 
@@ -39,18 +31,26 @@ const Language = () => {
   const dispatch = useDispatch();
   const open = Boolean(anchorEl);
   const customizer = useSelector((state) => state.customizer);
-  const currentLang =
-    Languages.find((_lang) => _lang.value === customizer.isLanguage) || Languages[1];
+  const currentLang = Languages.find((_lang) => _lang.value === customizer.isLanguage) || Languages[0];
   const { i18n } = useTranslation();
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const handleLanguageChange = (value) => {
+    dispatch(setLanguage(value));
+    i18n.changeLanguage(value);
+    handleClose();
+  };
+
   useEffect(() => {
     i18n.changeLanguage(customizer.isLanguage);
-  }, []);
+  }, [customizer.isLanguage, i18n]);
 
   return (
     <>
@@ -79,7 +79,7 @@ const Language = () => {
           <MenuItem
             key={index}
             sx={{ py: 2, px: 3 }}
-            onClick={() => dispatch(setLanguage(option.value))}
+            onClick={() => handleLanguageChange(option.value)}
           >
             <Stack direction="row" spacing={1} alignItems="center">
               <Avatar src={option.icon} alt={option.icon} sx={{ width: 20, height: 20 }} />

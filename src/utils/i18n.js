@@ -1,31 +1,28 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import english from 'src/utils/languages/en.json';
-import french from 'src/utils/languages/fr.json';
-import arabic from 'src/utils/languages/ar.json';
-import chinese from 'src/utils/languages/ch.json';
+import russian from 'src/utils/languages/ru.json';
+import uzbek from 'src/utils/languages/uz.json';
+
 const resources = {
   en: {
     translation: english,
   },
-  fr: {
-    translation: french,
+  ru: {
+    translation: russian,
   },
-  ar: {
-    translation: arabic,
-  },
-  ch: {
-    translation: chinese,
+  uz: {
+    translation: uzbek,
   },
 };
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next)
   .init({
     resources,
-    lng: 'en',
+    lng: 'ru', // язык по умолчанию
     interpolation: {
-      escapeValue: false, // react already safes from xss
+      escapeValue: false,
     },
   });
 
