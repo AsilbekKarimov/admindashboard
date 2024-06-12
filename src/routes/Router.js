@@ -22,44 +22,11 @@ const EcomProductList = Loadable(lazy(() => import('../views/apps/eCommerce/Ecom
 const EcomProductCheckout = Loadable(
   lazy(() => import('../views/apps/eCommerce/EcommerceCheckout')),
 );
-const UserProfile = Loadable(lazy(() => import('../views/apps/user-profile/UserProfile')));
-const Followers = Loadable(lazy(() => import('../views/apps/user-profile/Followers')));
-const Friends = Loadable(lazy(() => import('../views/apps/user-profile/Friends')));
-const Gallery = Loadable(lazy(() => import('../views/apps/user-profile/Gallery')));
 
 // Pages
-const RollbaseCASL = Loadable(lazy(() => import('../views/pages/rollbaseCASL/RollbaseCASL')));
-const Treeview = Loadable(lazy(() => import('../views/pages/treeview/Treeview')));
-const Pricing = Loadable(lazy(() => import('../views/pages/pricing/Pricing')));
 const AccountSetting = Loadable(
   lazy(() => import('../views/pages/account-setting/AccountSetting')),
 );
-const Faq = Loadable(lazy(() => import('../views/pages/faq/Faq')));
-
-// widget
-const WidgetCards = Loadable(lazy(() => import('../views/widgets/cards/WidgetCards')));
-const WidgetBanners = Loadable(lazy(() => import('../views/widgets/banners/WidgetBanners')));
-const WidgetCharts = Loadable(lazy(() => import('../views/widgets/charts/WidgetCharts')));
-
-// form elements
-const MuiAutoComplete = Loadable(
-  lazy(() => import('../views/forms/form-elements/MuiAutoComplete')),
-);
-const MuiButton = Loadable(lazy(() => import('../views/forms/form-elements/MuiButton')));
-const MuiCheckbox = Loadable(lazy(() => import('../views/forms/form-elements/MuiCheckbox')));
-const MuiRadio = Loadable(lazy(() => import('../views/forms/form-elements/MuiRadio')));
-const MuiSlider = Loadable(lazy(() => import('../views/forms/form-elements/MuiSlider')));
-const MuiDateTime = Loadable(lazy(() => import('../views/forms/form-elements/MuiDateTime')));
-const MuiSwitch = Loadable(lazy(() => import('../views/forms/form-elements/MuiSwitch')));
-
-// form layout
-const FormLayouts = Loadable(lazy(() => import('../views/forms/FormLayouts')));
-const FormCustom = Loadable(lazy(() => import('../views/forms/FormCustom')));
-const FormWizard = Loadable(lazy(() => import('../views/forms/FormWizard')));
-const FormValidation = Loadable(lazy(() => import('../views/forms/FormValidation')));
-const QuillEditor = Loadable(lazy(() => import('../views/forms/quill-editor/QuillEditor')));
-const FormHorizontal = Loadable(lazy(() => import('../views/forms/FormHorizontal')));
-const FormVertical = Loadable(lazy(() => import('../views/forms/FormVertical')));
 
 // tables
 const BasicTable = Loadable(lazy(() => import('../views/tables/BasicTable')));
@@ -68,15 +35,6 @@ const EnhancedTable = Loadable(lazy(() => import('../views/tables/EnhancedTable'
 const FixedHeaderTable = Loadable(lazy(() => import('../views/tables/FixedHeaderTable')));
 const PaginationTable = Loadable(lazy(() => import('../views/tables/PaginationTable')));
 const SearchTable = Loadable(lazy(() => import('../views/tables/SearchTable')));
-
-// chart
-const LineChart = Loadable(lazy(() => import('../views/charts/LineChart')));
-const GredientChart = Loadable(lazy(() => import('../views/charts/GredientChart')));
-const DoughnutChart = Loadable(lazy(() => import('../views/charts/DoughnutChart')));
-const AreaChart = Loadable(lazy(() => import('../views/charts/AreaChart')));
-const ColumnChart = Loadable(lazy(() => import('../views/charts/ColumnChart')));
-const CandlestickChart = Loadable(lazy(() => import('../views/charts/CandlestickChart')));
-const RadialbarChart = Loadable(lazy(() => import('../views/charts/RadialbarChart')));
 
 // ui
 const MuiAlert = Loadable(lazy(() => import('../views/ui-components/MuiAlert')));
@@ -114,7 +72,7 @@ const Router = [
     path: '/',
     element: <FullLayout />,
     children: [
-      { path: '/', element: <Navigate to="/landingpage" /> },
+      { path: '/', element: <Navigate to="dashboards/modern" /> },
       { path: '/dashboards/modern', exact: true, element: <ModernDash /> },
       { path: '/dashboards/ecommerce', exact: true, element: <EcommerceDash /> },
       { path: '/apps/notes', element: <Notes /> },
@@ -125,30 +83,13 @@ const Router = [
       { path: '/apps/ecommerce/eco-checkout', element: <EcomProductCheckout /> },
       { path: '/apps/ecommerce/detail/:id', element: <EcommerceDetail /> },
       { path: '/apps/branches', element: <Branches /> },
-      
       { path: '/pages/account-settings', element: <AccountSetting /> },
-      { path: '/forms/form-elements/autocomplete', element: <MuiAutoComplete /> },
-      { path: '/forms/form-elements/button', element: <MuiButton /> },
-      { path: '/forms/form-elements/checkbox', element: <MuiCheckbox /> },
-      { path: '/forms/form-elements/radio', element: <MuiRadio /> },
-      { path: '/forms/form-elements/slider', element: <MuiSlider /> },
-      { path: '/forms/form-elements/date-time', element: <MuiDateTime /> },
-      { path: '/forms/form-elements/switch', element: <MuiSwitch /> },
-      { path: '/forms/form-elements/switch', element: <MuiSwitch /> },
-      { path: '/forms/quill-editor', element: <QuillEditor /> },
       { path: '/tables/basic', element: <BasicTable /> },
       { path: '/tables/collapsible', element: <CollapsibleTable /> },
       { path: '/tables/enhanced', element: <EnhancedTable /> },
       { path: '/tables/fixed-header', element: <FixedHeaderTable /> },
       { path: '/tables/pagination', element: <PaginationTable /> },
       { path: '/tables/search', element: <SearchTable /> },
-      { path: '/charts/line-chart', element: <LineChart /> },
-      { path: '/charts/gredient-chart', element: <GredientChart /> },
-      { path: '/charts/doughnut-pie-chart', element: <DoughnutChart /> },
-      { path: '/charts/area-chart', element: <AreaChart /> },
-      { path: '/charts/column-chart', element: <ColumnChart /> },
-      { path: '/charts/candlestick-chart', element: <CandlestickChart /> },
-      { path: '/charts/radialbar-chart', element: <RadialbarChart /> },
       { path: '/ui-components/alert', element: <MuiAlert /> },
       { path: '/ui-components/accordion', element: <MuiAccordion /> },
       { path: '/ui-components/avatar', element: <MuiAvatar /> },
