@@ -63,7 +63,7 @@ export const ContactSlice = createSlice({
         lastname,
         image,
         department,
-        company,
+        company,  
         phone,
         email,
         address,

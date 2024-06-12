@@ -16,7 +16,10 @@
     "Friends": "Friends",
     "Gallery": "Gallery",
     "Notes": "Notes",
-    "Calendar": "Calendar",
+    "Calendar": "Calendar", 
     "Email": "Email",
-    "Tickets": "Tickets"
-}
+    "Tickets": "Tickets",
+    "welcome": "Welcome",
+    "Home": "Home"
+  }
+  
