@@ -78,15 +78,6 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: 'Contacts',
-    icon: IconPackage,
-    chip: '2',
-    chipColor: 'secondary',
-    href: '/apps/contacts',
-  },
-
-  {
-    id: uniqueId(),
     title: 'Ecommerce',
     icon: IconBasket,
     href: '/apps/ecommerce/',
@@ -160,8 +151,47 @@ const Menuitems = [
     title: 'Calendar',
     icon: IconCalendar,
     href: '/apps/calendar',
-  },  
-  
+  },
+  {
+    navlabel: true,
+    subheader: 'Tables',
+  },
+  {
+    id: uniqueId(),
+    title: 'Basic',
+    icon: IconBorderAll,
+    href: '/tables/basic',
+  },
+  {
+    id: uniqueId(),
+    title: 'Collapsible',
+    icon: IconBorderHorizontal,
+    href: '/tables/collapsible',
+  },
+  {
+    id: uniqueId(),
+    title: 'Enhanced',
+    icon: IconBorderInner,
+    href: '/tables/enhanced',
+  },
+  {
+    id: uniqueId(),
+    title: 'Fixed Header',
+    icon: IconBorderVertical,
+    href: '/tables/fixed-header',
+  },
+  {
+    id: uniqueId(),
+    title: 'Pagination',
+    icon: IconBorderTop,
+    href: '/tables/pagination',
+  },
+  {
+    id: uniqueId(),
+    title: 'Search',
+    icon: IconBorderStyle2,
+    href: '/tables/search',
+  },
 ];
 
 export default Menuitems;

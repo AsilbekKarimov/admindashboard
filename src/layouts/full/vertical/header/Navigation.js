@@ -130,6 +130,15 @@ const AppDD = () => {
       >
         Contacts
       </Button>
+      <Button
+        color="inherit"
+        sx={{ color: (theme) => theme.palette.text.secondary }}
+        variant="text"
+        to="/tables/basic"
+        component={Link}
+      >
+        Table
+      </Button>
       <Box>
         <Button
           aria-label="show 11 new notifications"
@@ -159,7 +168,7 @@ const AppDD = () => {
           transformOrigin={{ horizontal: 'left', vertical: 'top' }}
           sx={{
             '& .MuiMenu-paper': {
-              display: "flex",
+              display: 'flex',
               width: '250px',
             },
             '& .MuiMenu-paper ul': {
