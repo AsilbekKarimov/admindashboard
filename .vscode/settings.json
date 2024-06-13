@@ -1,0 +1,7 @@
+{
+    "i18n-ally.localesPaths": [
+        "src/utils/languages",
+        "src/_mockApis/language"
+    ],
+    "i18n-ally.keystyle": "flat"
+}

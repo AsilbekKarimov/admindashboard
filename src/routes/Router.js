@@ -13,7 +13,11 @@ const EcommerceDash = Loadable(lazy(() => import('../views/dashboard/Ecommerce')
 
 /* ****Apps***** */
 const Calendar = Loadable(lazy(() => import('../views/apps/calendar/BigCalendar')));
-const Branches = Loadable(lazy(() => import('../views/apps/branches/Branches.js')));
+const Branches = Loadable(lazy(() => import('../views/apps/branches/Branches')));
+const Categories = Loadable(lazy(() => import('../views/apps/categories/Categories')));
+const Reviews = Loadable(lazy(() => import('../views/apps/reviews/Reviews')));
+const Orders = Loadable(lazy(() => import('../views/apps/orders/Orders')));
+const Incoming = Loadable(lazy(() => import('../views/apps/incoming/Incoming')));
 const Notes = Loadable(lazy(() => import('../views/apps/notes/Notes')));
 const Contacts = Loadable(lazy(() => import('../views/apps/contacts/Contacts')));
 const Ecommerce = Loadable(lazy(() => import('../views/apps/eCommerce/Ecommerce')));
@@ -22,6 +26,10 @@ const EcomProductList = Loadable(lazy(() => import('../views/apps/eCommerce/Ecom
 const EcomProductCheckout = Loadable(
   lazy(() => import('../views/apps/eCommerce/EcommerceCheckout')),
 );
+const UserProfile = Loadable(lazy(() => import('../views/apps/user-profile/UserProfile')));
+const Followers = Loadable(lazy(() => import('../views/apps/user-profile/Followers')));
+const Friends = Loadable(lazy(() => import('../views/apps/user-profile/Friends')));
+const Gallery = Loadable(lazy(() => import('../views/apps/user-profile/Gallery')));
 
 // Pages
 const AccountSetting = Loadable(
@@ -82,7 +90,15 @@ const Router = [
       { path: '/apps/ecommerce/eco-product-list', element: <EcomProductList /> },
       { path: '/apps/ecommerce/eco-checkout', element: <EcomProductCheckout /> },
       { path: '/apps/ecommerce/detail/:id', element: <EcommerceDetail /> },
+      { path: '/apps/followers', element: <Followers /> },
+      { path: '/apps/friends', element: <Friends /> },
+      { path: '/apps/gallery', element: <Gallery /> },
+      { path: '/user-profile', element: <UserProfile /> },
       { path: '/apps/branches', element: <Branches /> },
+      { path: '/apps/categories', element: <Categories /> },
+      { path: '/apps/reviews', element: <Reviews /> },
+      { path: '/apps/orders', element: <Orders /> },
+      { path: '/apps/incoming', element: <Incoming   /> },
       { path: '/pages/account-settings', element: <AccountSetting /> },
       { path: '/tables/basic', element: <BasicTable /> },
       { path: '/tables/collapsible', element: <CollapsibleTable /> },

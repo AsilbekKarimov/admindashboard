@@ -90,12 +90,6 @@ const profile = [
 
 const appsLink = [
   {
-    href: '/apps/chats',
-    title: 'Chat Application',
-    subtext: 'Messages & Emails',
-    avatar: ddIcon1,
-  },
-  {
     href: '/apps/ecommerce/shop',
     title: 'eCommerce App',
     subtext: 'Messages & Emails',
@@ -120,18 +114,6 @@ const appsLink = [
     avatar: ddIcon5,
   },
   {
-    href: '/apps/tickets',
-    title: 'Tickets App',
-    subtext: 'Account settings',
-    avatar: ddIcon6,
-  },
-  {
-    href: '/apps/email',
-    title: 'Email App',
-    subtext: 'To-do and Daily tasks',
-    avatar: ddIcon7,
-  },
-  {
     href: '/dashboards/ecommerce',
     title: 'Ecom Dashboard ',
     subtext: 'Data-genic Dashbaords',
@@ -140,10 +122,6 @@ const appsLink = [
 ];
 
 const pageLinks = [
-  {
-    href: '/pricing',
-    title: 'Pricing Page',
-  },
   {
     href: '/auth/login',
     title: 'Authentication Design',
@@ -163,10 +141,6 @@ const pageLinks = [
   {
     href: '/user-profile',
     title: 'User Application',
-  },
-  {
-    href: '/apps/blog/posts',
-    title: 'Blog Design',
   },
   {
     href: '/apps/ecommerce/eco-checkout',

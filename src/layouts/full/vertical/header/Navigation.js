@@ -5,8 +5,11 @@ import { IconChevronDown, IconHelp } from '@tabler/icons';
 import AppLinks from './AppLinks';
 import QuickLinks from './QuickLinks';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const AppDD = () => {
+  const { t } = useTranslation();
+
   const [anchorElApps, setAnchorElApps] = useState(null);
   const [anchorElQuickLinks, setAnchorElQuickLinks] = useState(null);
 
@@ -42,8 +45,7 @@ const AppDD = () => {
           onClick={handleClickApps}
           endIcon={<IconChevronDown size="15" style={{ marginLeft: '-5px', marginTop: '2px' }} />}
         >
-          Apps
-        </Button>
+          {t('apps')} </Button>
         {/* ------------------------------------------- */}
         {/* Apps Dropdown */}
         {/* ------------------------------------------- */}
@@ -95,7 +97,7 @@ const AppDD = () => {
                     </Typography>
                   </Link>
                   <Button variant="contained" color="primary">
-                    Check
+                    {t(`${"Check"}`)}
                   </Button>
                 </Box>
               </Box>
